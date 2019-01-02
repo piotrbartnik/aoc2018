@@ -1,2 +1,2 @@
-let input = document.getElementsByTagName('pre')[0];
-console.log(input.split('/n'))
+let input = document.getElementsByTagName('pre');
+let inputArr = input[0].innerText.split('\n');

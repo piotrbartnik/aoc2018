@@ -1,19 +1,20 @@
-let input = '+1, -2, +3, +1';
-let inputArr = input.split(',');
+let input = document.getElementsByTagName('pre');
+let inputArr = input[0].innerText.split('\n');
 let zero = 0;
-let arrT = [];
-for (i = 0; i < inputArr.length; i++) {
+for (i=0;i<inputArr.length;i++){
   inputArr[i] = parseInt(inputArr[i]);
 }
-for (i = 0; i < inputArr.length; i++) {
-  zero += inputArr[i]
-  arrT.push(zero)
+let sum = 0
+let set = new Set([0])
+let length = inputArr.length-1
+
+for(let x = 0 ; ; x = ((x+1) % length)){
+    sum += inputArr[x]
+
+    if(set.has(sum)){
+        console.log(sum)
+        break
+    }else{
+        set.add(sum)
+    }
 }
-// for (i = 0; i < 10; i++) {
-//   for (j = i + 1; j < 10; j++) {
-//     if (arrT[i % arrT.length] === arrT[j % arrT.length]) {
-//       console.log(arrT[j % arrT.length])
-//     }
-//   }
-// }
-console.log(arrT)

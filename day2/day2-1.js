@@ -1,6 +1,6 @@
 let input = document.getElementsByTagName('pre');
-let inputArr = input[0].innerText.trim().split('\n');
-inputArr = inputArr.map(x=>x.split('').sort().join(''))
+let boxIDs = input[0].innerText.trim().split('\n');
+boxIDs = boxIDs.map(x=>x.split('').sort().join(''))
 let result= [];
 result[0] = boxIDs.reduce((acc, val) => {
   let letters = val.split('').reduce((acc, val) => {

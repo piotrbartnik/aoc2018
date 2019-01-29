@@ -1,7 +1,7 @@
 let input = document.getElementsByTagName('pre');
 let boxIDs = input[0].innerText.trim().split('\n');
 boxIDs = boxIDs.map(x=>x.split('').sort().join(''))
-let result= [];
+let result= []
 result[0] = boxIDs.reduce((acc, val) => {
   let letters = val.split('').reduce((acc, val) => {
       acc[val] = (acc[val] || 0) + 1;
